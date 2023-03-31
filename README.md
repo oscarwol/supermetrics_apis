@@ -27,7 +27,7 @@ Para este proyecto se utilizo 'SQLAlchemy' un ORM desiñado para flask, el ORM a
 Se debe configurar a donde apuntará la DB, eso se hace en la siguiente línea de código:
 
 ```
-12. url = url = "mysql+pymysql://root:pass@localhost:3306/supermetrics_api"
+12. url = "mysql+pymysql://root:pass@localhost:3306/supermetrics_api"
 ```
 Para configurar la base de datos, ver el ejemplo de arriba y seguir la nomenclatura de datos descrita a continuación:
 
@@ -50,7 +50,7 @@ python api.py
 localhost:5000 (El puerto puede cambiarse de ser necesario)
 ```
 
-El sistema cuenta con 7 'Endpoints' diferentes: 
+El sistema cuenta con 9 'Endpoints' diferentes: 
 
 | HTTP Type | Path | Used For |
 | --- | --- | --- |
@@ -63,3 +63,6 @@ El sistema cuenta con 7 'Endpoints' diferentes:
 | `GET` | /fb-anuncio | Registra los datos del endpoint de FB-ANUNCIO en la base de datos|
 | `GET` | /bulk | (SOLO TEST) Registra Todos los datos anteriores al mismo tiempo|
 | `GET` | /reverse | (SOLO TEST) Borra todos los datos de la DB correspondientes al dia de hoy|
+
+
+Se recomienda utilizar cada endpoint por separado respentando la modularización de los mismos.
